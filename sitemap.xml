@@ -8,6 +8,8 @@
 <url> <loc>https://your-docusaurus-test-site.com/blog/2017/09/25/testing-rss.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://your-docusaurus-test-site.com/blog/2017/04/10/blog-post-two.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://your-docusaurus-test-site.com/blog/2016/03/11/blog-post.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://your-docusaurus-test-site.com/docs/add-page.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/add-page.html" /> </url>
+<url> <loc>https://your-docusaurus-test-site.com/docs/ajax.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/ajax.html" /> </url>
 <url> <loc>https://your-docusaurus-test-site.com/docs/doc1.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/doc1.html" /> </url>
 <url> <loc>https://your-docusaurus-test-site.com/docs/doc2.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/doc2.html" /> </url>
 <url> <loc>https://your-docusaurus-test-site.com/docs/doc3.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/doc3.html" /> </url>
@@ -15,6 +17,8 @@
 <url> <loc>https://your-docusaurus-test-site.com/docs/doc5.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/doc5.html" /> </url>
 <url> <loc>https://your-docusaurus-test-site.com/docs/fields.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/fields.html" /> </url>
 <url> <loc>https://your-docusaurus-test-site.com/docs/form.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/form.html" /> </url>
+<url> <loc>https://your-docusaurus-test-site.com/docs/notice.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/notice.html" /> </url>
 <url> <loc>https://your-docusaurus-test-site.com/docs/pagination_.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/pagination_.html" /> </url>
 <url> <loc>https://your-docusaurus-test-site.com/docs/q-antd.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/q-antd.html" /> </url>
+<url> <loc>https://your-docusaurus-test-site.com/docs/q.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/q.html" /> </url>
 </urlset>
