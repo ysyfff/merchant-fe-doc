@@ -4,7 +4,14 @@ title: Form
 sidebar_label: Form
 ---
 
-## 使用
+## 使用说明
+使用Form组件和FormItem组件进行布局
+* 使用Form的model属性和表单元素的duplex属性，进行数据的双绑。
+* 使用Form的rules属性进行表单元素的校验
+  * 校验规则的写法参见[async-validator](https://github.com/yiminghe/async-validator)
+  * 校验的触发，在各个规则中传入trigger属性，例如：trigger:'blur'或者trigger: ['blur', 'change']
+
+## 使用示例
 ```JS
 import mobx, { observable, action, transaction, spy } from 'mobx';
 const search = observable({
@@ -14,8 +21,8 @@ const search = observable({
 });
 const noticeRule = observable({
   singlePhone: [
-    { required: true, message: '必填'},
-    { ...rules.cellphone }
+    { required: true, message: '必填', trigger: 'blur'},
+    { ...rules.cellphone, trigger: ['blur', 'change']}
   ]
 })
 @observer

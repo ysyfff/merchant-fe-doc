@@ -11,6 +11,10 @@ sidebar_label: 各表单元素用法
   * Mention_双绑的时候有bug，可使用antd的Mention
   * Select_, TreeSelect_双绑的值当且仅当为none(void 0的别名)的时候才显示placeholder
 
+## 使用说明
+
+* 每个元素都有一个duplex属性，此属性与Model或者Form组件的model属性结合起来完成双绑，duplex的值为model对象的key
+
 ## 表单元素列表
 
 * Input_、Input_.TextArea_
