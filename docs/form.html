@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Form · merchant-fe-doc</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Form · merchant-fe-doc"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/merchant-fe-doc/index.html"/><meta property="og:description" content="## 使用"/><meta property="og:image" content="https://your-docusaurus-test-site.com/merchant-fe-doc/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/merchant-fe-doc/img/docusaurus.png"/><link rel="shortcut icon" href="/merchant-fe-doc/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/merchant-fe-doc/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/merchant-fe-doc/"><img class="logo" src="/merchant-fe-doc/img/docusaurus.svg" alt="merchant-fe-doc"/><h2 class="headerTitleWithLogo">merchant-fe-doc</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/merchant-fe-doc/docs/q-antd.html" target="_self">Docs</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>q-antd</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>q-antd</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.html">概述</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/merchant-fe-doc/docs/form.html">Form</a></li><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/fields.html">各表单元素用法</a></li></ul></div><div class="navGroup navGroupActive"><h3>组件</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/pagination_.html">Pagination_</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Form</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="使用"></a><a href="#使用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用</h2>
+<pre><code class="hljs css JS"><span class="hljs-keyword">import</span> mobx, { observable, action, transaction, spy } <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx'</span>;
+<span class="hljs-keyword">const</span> search = observable({
+  <span class="hljs-attr">start</span>: moment().add(<span class="hljs-number">-6</span>, <span class="hljs-string">'days'</span>).format(<span class="hljs-string">'YYYY-MM-DD'</span>),
+  <span class="hljs-attr">end</span>: moment().format(<span class="hljs-string">'YYYY-MM-DD'</span>),
+  <span class="hljs-attr">room</span>: <span class="hljs-string">'all'</span>
+});
+<span class="hljs-keyword">const</span> noticeRule = observable({
+  <span class="hljs-attr">singlePhone</span>: [
+    { <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">message</span>: <span class="hljs-string">'必填'</span>},
+    { ...rules.cellphone }
+  ]
+})
+@observer
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Remind</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Form</span> <span class="hljs-attr">model</span>=<span class="hljs-string">{notice}</span> <span class="hljs-attr">rules</span>=<span class="hljs-string">{noticeRule}</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">{ref</span> =&gt;</span> this.remindForm = ref} labelWidth={80} labelPosition=":flex-start"&gt;
+        <span class="hljs-tag">&lt;<span class="hljs-name">FormItem</span> <span class="hljs-attr">labelStyle</span>=<span class="hljs-string">{labelStyle}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"mb-13"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"弹窗提醒"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Select_</span> <span class="hljs-attr">duplex</span>=<span class="hljs-string">"alert"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">width:</span> <span class="hljs-attr">130</span> }}&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{1}</span>&gt;</span>开启<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{0}</span>&gt;</span>关闭<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Select_</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">FormItem</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">FormItem</span> <span class="hljs-attr">labelStyle</span>=<span class="hljs-string">{labelStyle}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"mb-13"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"声音提醒"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Select_</span> <span class="hljs-attr">duplex</span>=<span class="hljs-string">"voice"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">width:</span> <span class="hljs-attr">130</span> }}&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{1}</span>&gt;</span>开启<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{0}</span>&gt;</span>关闭<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Select_</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">FormItem</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">FormItem</span> <span class="hljs-attr">labelStyle</span>=<span class="hljs-string">{labelStyle}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"mb-13"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"电话提醒"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Select_</span> <span class="hljs-attr">duplex</span>=<span class="hljs-string">"phone"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">width:</span> <span class="hljs-attr">130</span> }}&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{1}</span>&gt;</span>开启<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{0}</span>&gt;</span>关闭<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Select_</span>&gt;</span>
+          {notice.phone === 1 &amp;&amp;
+            <span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">clear</span> <span class="hljs-attr">mt</span>=<span class="hljs-string">{20}</span>&gt;</span>
+              {phones.map((item, i) =&gt; {
+                return (
+                  <span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">clear</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{i}</span> <span class="hljs-attr">mb</span>=<span class="hljs-string">{i</span> === <span class="hljs-string">phones.length</span> <span class="hljs-attr">-</span> <span class="hljs-attr">1</span> ? <span class="hljs-attr">0</span> <span class="hljs-attr">:</span> <span class="hljs-attr">14</span>}&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">FormItem</span> <span class="hljs-attr">prop</span>=<span class="hljs-string">"singlePhone"</span> <span class="hljs-attr">duplex</span>=<span class="hljs-string">{[</span>'<span class="hljs-attr">phones</span>', <span class="hljs-attr">i</span>]} <span class="hljs-attr">labelWidth</span>=<span class="hljs-string">{0}</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">Input_</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{i}</span> <span class="hljs-attr">type_</span>=<span class="hljs-string">"vice"</span> <span class="hljs-attr">duplex</span>=<span class="hljs-string">{[</span>'<span class="hljs-attr">phones</span>', <span class="hljs-attr">i</span>]} <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">width:</span> <span class="hljs-attr">130</span> }} <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"请输入手机号"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">FormItem</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span>
+                )
+              })}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span>
+          }
+        <span class="hljs-tag">&lt;/<span class="hljs-name">FormItem</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Form</span>&gt;</span>
+    )
+  }
+}
+</span></code></pre>
+<h2><a class="anchor" aria-hidden="true" id="校验规则的使用说明"></a><a href="#校验规则的使用说明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>校验规则的使用说明</h2>
+<p>校验规则的使用分为两步</p>
+<ul>
+<li>在Form上传入rules={noticeRule} 参见上面代码</li>
+<li>在FormItem中传入prop=&quot;singlePhone&quot;，如果是数组还需要传入duplex，duplex的取值和循环元素的取值一样，循环的元素注意加上key 参见上面代码</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="api"></a><a href="#api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API</h2>
+<blockquote>
+<p>style,className等原有属性均支持</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="form方法"></a><a href="#form方法" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Form方法</h3>
+<table>
+<thead>
+<tr><th>方法</th><th>说明</th><th>用法</th></tr>
+</thead>
+<tbody>
+<tr><td>resetFields</td><td>重置表单默认值</td><td>this.xxxFrom.resetFields()</td></tr>
+<tr><td>resetFieldsStyle</td><td>重置校验过之后的样式</td><td>this.xxxFrom.resetFieldsStyle()</td></tr>
+<tr><td>validate</td><td>校验表单，返回一个Promise实例，也支持传入回调函数处理</td><td>this.xxxForm.validate().then((valid)=&gt;{}) 或者 this.xxxForm.validate((valid)=&gt;{})</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="form属性"></a><a href="#form属性" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Form属性</h3>
+<table>
+<thead>
+<tr><th>方法</th><th>说明</th><th>类型</th><th>默认值</th><th>必须</th></tr>
+</thead>
+<tbody>
+<tr><td>model</td><td>mobx的observable对象，存储表单的数据</td><td>object</td><td>-</td><td>Y</td></tr>
+<tr><td>rules</td><td>mobx的observable对象或JS对象，验证表单的规则</td><td>object</td><td>-</td><td></td></tr>
+<tr><td>inline</td><td>form表单的布局方式。设为true时，form的子元素按inline布局</td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>layout</td><td>FormItem整体、Action以及各个FormItem的布局,用法可为‘:flex:block’，未设置的那个值回去默认值<br/>第一个值表示FormItem整体的布局，可取值flex和block<br/>第二个值表示Action的布局，可取值flex和block<br/>第三个值表示各个FormItem的布局，可取值flex和block</td><td>string</td><td>'flex:block:block'</td><td></td></tr>
+<tr><td>actionPosition</td><td>Action的位置，用法可为‘:flex-start’或‘bottom:’，未设置的那个值取默认值<br/>第一个值表示action相对于FormItem的位置，可取值right和bottom<br/>第二个值表示action局部的布局，有效值alignItem的值</td><td>string</td><td>'right:flex-end'</td><td></td></tr>
+<tr><td>labelPosition</td><td>FormItem中label的位置，用法可为‘::right’，未设置的那个值取默认值<br/>第一个值表示label的宏观位置，取值为top或者left<br/>第二个值表示label在垂直方向的布局，有效值是alignItems的值<br/>第三个是label在水平方向的布局，取值为textAlign的值</td><td>string</td><td>'left:center:right'</td><td></td></tr>
+<tr><td>fillCount</td><td>每行FormItem的数量，如果最后一行FormItem数量&lt;fillCount，会使用空的FormItem填充，以保证布局的对齐</td><td>number</td><td>1</td><td></td></tr>
+<tr><td>manualLayout</td><td>手动布局，设为true时，上面的inline,layout,actionPosition,lablePosition,fillCount不再生效</td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>labelWidth</td><td>label的宽度，设为0时，会被替换为'auto'</td><td>number</td><td>0</td><td></td></tr>
+<tr><td>needCls</td><td>设为false时，不再使用q-antd自带的样式className——i-form</td><td>bool</td><td>true</td><td></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="formitem属性"></a><a href="#formitem属性" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FormItem属性</h3>
+<table>
+<thead>
+<tr><th>方法</th><th>说明</th><th>类型</th><th>默认值</th><th>必须</th></tr>
+</thead>
+<tbody>
+<tr><td>label</td><td>FormItem各项名称</td><td>string</td><td>-</td><td></td></tr>
+<tr><td>labelStyle</td><td>label的style</td><td>object</td><td>-</td><td></td></tr>
+<tr><td>labelWidth</td><td>label的宽度</td><td>number</td><td>0</td><td></td></tr>
+<tr><td>prop</td><td>表单验证时候用到，若无此属性，不验证。取值为Form重rules属性中的key</td><td>number</td><td>-</td><td></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="action属性"></a><a href="#action属性" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Action属性</h3>
+<table>
+<thead>
+<tr><th>方法</th><th>说明</th><th>类型</th><th>默认值</th><th>必须</th></tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="q-antd.html">← q-antd</a><a class="docs-next button" href="fields.html">各表单元素用法 →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#使用">使用</a></li><li><a href="#校验规则的使用说明">校验规则的使用说明</a></li><li><a href="#api">API</a><ul class="toc-headings"><li><a href="#form方法">Form方法</a></li><li><a href="#form属性">Form属性</a></li><li><a href="#formitem属性">FormItem属性</a></li><li><a href="#action属性">Action属性</a></li></ul></li></ul></nav></div></div></body></html>
