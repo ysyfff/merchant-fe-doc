@@ -1,7 +1,11 @@
 {
   "docs": {
-    "q-antd": ["q-antd", "form", "fields"],
-    "组件":["pagination_"]
+    "开发须知": ["notice"],
+    "新增页面": ["add-page"],
+    "表单": ["q-antd", "fields", "form"],
+    "组件":["pagination_"],
+    "接口调用": ["ajax"],
+    "Q": ["q"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]

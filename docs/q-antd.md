@@ -1,8 +1,10 @@
 ---
 id: q-antd
 title: q-antd
-sidebar_label: 概述
+sidebar_label: q-antd
 ---
+
+表单元素以及表单校验使用了q-antd
 
 ## 简介
 

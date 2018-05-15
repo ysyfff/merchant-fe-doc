@@ -1,7 +1,7 @@
 ---
 id: fields
-title: 各表单元素用法
-sidebar_label: 各表单元素用法
+title: 各表单元素
+sidebar_label: 各表单元素
 ---
 
 ## 特殊说明
@@ -32,7 +32,7 @@ sidebar_label: 各表单元素用法
 * TimePicker_
 * Transfer_
 
-## 用法示例
+## 使用示例
 
 ```JS
 import React from 'react';
