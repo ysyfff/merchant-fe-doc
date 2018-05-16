@@ -48,7 +48,7 @@ Q.ajax('FETCH_LIST', {seq: 'xxx'}).then((res)=>{
   //业务代码
 })
 ```
-dd
+
 ## Q.ajax.setup配置属性
 > 以下只展示了自定义封装属性以及部分ajax属性，其他属性参考[jquery的ajax配置](http://api.jquery.com/jquery.ajax/)
 <!-- 
