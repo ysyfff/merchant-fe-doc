@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'merchant-fe-doc' /* title for your website */,
+  title: 'merchant-fe' /* title for your website */,
   tagline: 'A website for testing',
   url: 'https://your-docusaurus-test-site.com' /* your website url */,
   baseUrl: '/merchant-fe-doc/' /* base url for your project */,
@@ -54,8 +54,9 @@ const siteConfig = {
 
   /* colors for website */
   colors: {
-    primaryColor: '#3884FF',
-    secondaryColor: 'red',
+    primaryColor: '#ff4081',
+    // primaryColor: '#3884FF',
+    secondaryColor: '#FF0000',
   },
 
   /* custom fonts for website */
