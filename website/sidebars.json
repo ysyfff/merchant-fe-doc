@@ -2,7 +2,7 @@
   "docs": {
     "开发须知": ["notice"],
     "新增页面": ["add-page"],
-    "表单": ["q-antd", "fields", "form"],
+    "q-antd": ["q-antd", "q-antd.fields", "q-antd.form", "q-antd.view", "q-antd.a", "q-antd.text", "q-antd.flexbox"],
     "组件":["pagination_"],
     "接口调用": ["ajax"],
     "Q": ["q"]

@@ -1,7 +1,7 @@
 ---
 id: q-antd
-title: q-antd
-sidebar_label: q-antd
+title: 概述
+sidebar_label: 概述
 ---
 
 表单元素以及表单校验使用了q-antd
@@ -26,7 +26,23 @@ q-antd的优势是
 
 ## 关于各表单元素
 
-[参见各表单元素用法](fields.md)
+[参见各表单元素用法](q-antd.fields.md)
+
+## 其他组件
+
+### View
+
+[参见View](q-antd.view.md)
+
+### Flexbox
+
+[参见Flexbox](q-antd.flexbox.md)
+
+### A
+[参见A](q-antd.a.md)
+
+### Text
+[参见Text](q-antd.text.md)
 
 
 

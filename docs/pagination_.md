@@ -9,13 +9,19 @@ sidebar_label: Pagination_
 ## 使用
 
 ```JS
-<Pagination_ 
-  defaultCurrent={1} 
-  current={search.page} 
-  onJump={page => search.page = page} 
-  total={listData.totalCount} 
-  onChange={this.handlePageChange}
-/>
+export default class Demo extends React.Component{
+  render(){
+    return(
+      <Pagination_ 
+        defaultCurrent={1} 
+        current={search.page} 
+        onJump={page => search.page = page} 
+        total={listData.totalCount} 
+        onChange={this.handlePageChange}
+      />
+    )
+  }
+}
 ```
 
 ## Props

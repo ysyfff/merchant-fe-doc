@@ -1,12 +1,12 @@
 ---
-id: fields
+id: q-antd.fields
 title: 各表单元素
 sidebar_label: 各表单元素
 ---
 
 ## 特殊说明
 
-* q-antd中的所有表单元素命名规则都是在antd的命名之后加上_。比如Input在q-antd中就叫Input_;Input.TextArea在q-antd中就叫Input_.TextArea_
+* q-antd中的所有表单元素命名规则都是在antd的命名之后加上\_。比如Input在q-antd中就叫Input_;Input.TextArea在q-antd中就叫Input_.TextArea_
 * 由于有些antd组件的源码存在缺陷，故做如下特殊说明
   * Mention_双绑的时候有bug，可使用antd的Mention
   * Select_, TreeSelect_双绑的值当且仅当为none(void 0的别名)的时候才显示placeholder
@@ -133,57 +133,55 @@ export default class QAntd extends React.Component {
       <Model model={search}>
         <View ml={30} mr={30}>
           <div>{JSON.stringify(mobx.toJS(search))}</div><br />
-          {/* Input_ */}
+          
           <View clear block><Input_ duplex="a" placeholder="没有form的表单" /></View> Input_的使用<br />
-          {/* Input_.TextArea_ */}
+          
           <View clear block><Input_.TextArea_ duplex="aa" rows={2} placeholder="没有form的表单" /></View> Input_.TextArea_的使用<br />
-          {/* InputNumber_ */}
+          
           <View clear block><InputNumber_ duplex="aaa" rows={2} placeholder="没有form的表单" /></View> InputNumber_的使用<br />
-          {/* Radio_ */}
+          
           <Radio_ duplex="b" >我是一个人</Radio_>Radio_的使用，单个Radio可将b设为true或者false <br />
-          {/* Radio_.Group_ */}
+          
           <Radio_.Group_ duplex="c">
             <Radio value="1">1</Radio>
             <Radio value="2">2</Radio>
           </Radio_.Group_> Radio_.Group_的使用之用法一<br />
-          {/* Radio_.Group_ */}
+          
           <Radio_.Group_ duplex="cc" options={[
             { label: 'Apple', value: 'Apple' },
             { label: 'Pear', value: 'Pear' },
             { label: 'Orange', value: 'Orange' }
           ]} /> Radio_.Group_的使用之用法二<br />
-          {/* Checkbox_ */}
+          
           <Checkbox_ duplex="d">Banana</Checkbox_> Checkbox_的使用<br />
-          {/* Checkbox_.Group_ */}
+          
           <Checkbox_.Group_ options={[{ label: 'Apple', value: 'Apple' }, { label: 'Pear', value: 'Pear' }]} duplex="e" /> Checkbox_.Group_的使用<br />
-          {/* Select_ */}
+          
           <Select_ style={{ width: 400 }} duplex="select" placeholder="select的双绑值为none的时候才能显示placeholder" >
             <Option value="Jack">Jack</Option>
             <Option value="ruler">ruler</Option>
           </Select_> Select_的使用<br />
-          {/* AutoComplete_ */}
+          
           <AutoComplete_ duplex="suggest" dataSource={['1', '2', '3']}></AutoComplete_> AutoComplete_的使用 <br />
-          {/* Cascader */}
+          
           <Cascader_ style={{ width: 400 }} duplex="area" options={cascaderOptions}></Cascader_> Cascader_的使用 <br />
-          {/* DatePicker_ */}
+          
           <DatePicker_ duplex="date" /> DatePicker_的使用 <br />
-          {/* MonthPicker_ */}
+          
           <MonthPicker_ duplex="month" /> MonthPicker_的使用<br />
-          {/* WeekPicker_ */}
+          
           <WeekPicker_ duplex="week" /> WeekPicker_的使用<br />
-          {/* RangePicker_ */}
+          
           <RangePicker_ duplex="rangeStart, rangeEnd" /> RangePicker_的使用 <br />
-          {/* Mention_ */}
-          {/* <Mention_ duplex="mention" suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', '中文', 'にほんご']} /> Mention_的使用<br/> */}
-          {/* Rate_ */}
+          
           <Rate_ duplex="rate" /> Rate_的使用<br />
-          {/* Slider_ */}
+          
           <Slider_ duplex="slider" min={0} max={100} /> Slider_的使用<br />
-          {/* Slider_ */}
+          
           <Slider_ range duplex="sliderRange" min={0} max={100} /> Slider_中range的使用<br />
-          {/* Switch_ */}
+          
           <Switch_ range duplex="switch" min={0} max={100} /> Switch_的使用<br />
-          {/* TreeSelect_ */}
+          
           <TreeSelect_ treeDefaultExpandAll duplex="treeSelect" placeholder="Please select" >
             <TreeNode value="parent 1" title="parent 1" key="0-1">
               <TreeNode value="parent 1-0" title="parent 1-0" key="0-1-1">
@@ -195,9 +193,9 @@ export default class QAntd extends React.Component {
               </TreeNode>
             </TreeNode>
           </TreeSelect_> TreeSelect_的使用<br />
-          {/* TimePicker_ */}
+          
           <TimePicker_ duplex="time" /> TimePicker_的使用<br />
-          {/* Transfer_ */}
+          
           <Transfer_
             dataSource={mockData}
             duplex="transfer"

@@ -1,5 +1,5 @@
 ---
-id: form
+id: q-antd.form
 title: Form
 sidebar_label: Form
 ---
