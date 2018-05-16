@@ -61,7 +61,6 @@ Q.ajax('FETCH_LIST', {seq: 'xxx'}).then((res)=>{
 - [lock](interface.md#lock)
 - [succMsg](interface.md#succmsg)
 - [failMsg](interface.md#failmsg) -->
-dd
 
 ### `url`
 请求路径
