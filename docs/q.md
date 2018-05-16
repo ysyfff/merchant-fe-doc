@@ -27,3 +27,6 @@ root的mobx对象，主要用来控制全局的页面loading
 ```JS
 Q.rootStore.loading(true)
 ```
+
+
+This is it?
