@@ -39,6 +39,14 @@ jobs:
     steps:
       - checkout
 
+      - run:
+      name: Deploying to GitHub Pages
+      command: |
+        git config --global user.email "ysyfff@users.noreply.github.com"
+        git config --global user.name "ysyfff"
+        echo "machine github.com login ysyfff password $GITHUB_TOKEN" > ~/.netrc
+        cd website && yarn install && GIT_USER=ysyfff yarn run publish-gh-pages
+        
       # Download and cache dependencies
       # - restore_cache:
       #     keys:
@@ -46,7 +54,7 @@ jobs:
       #     # fallback to using the latest cache if no exact match is found
       #     - v1-dependencies-
 
-      - run: cd website && yarn install
+      # - run: cd website && yarn install
 
       # - save_cache:
       #     paths:
@@ -54,4 +62,4 @@ jobs:
       #     key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: cd website && yarn publish-gh
+      # - run: cd website && yarn publish-gh
