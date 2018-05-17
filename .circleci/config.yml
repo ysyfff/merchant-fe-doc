@@ -9,12 +9,22 @@ jobs:
 
     steps:
       - checkout
-      
+
+      - restore_cache: # special step to restore the dependency cache 
+        key: dependency-cache-{{ checksum "package.json" }}
+
       - run: git config --global user.email "ysyfff@users.noreply.github.com"
 
       - run: git config --global user.name "ysyfff"
 
       - run: echo "machine github.com login ysyfff password $GITHUB_TOKEN" > ~/.netrc
 
-      - run: cd website && yarn install && GIT_USER=ysyfff yarn run publish-gh-pages
+      - run: cd website && yarn install 
+
+      - save_cache: # special step to save the dependency cache
+        key: dependency-cache-{{ checksum "package.json" }}
+        paths:
+          - ./node_modules
+
+      - run: cd website && GIT_USER=ysyfff yarn run publish-gh-pages
 
