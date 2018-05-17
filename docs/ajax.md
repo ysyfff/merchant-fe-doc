@@ -68,8 +68,6 @@ type|default
 ---|---
 string | -
 
-this is ok
-
 ### `ajaxType`
 请求type
 type|default
