@@ -32,7 +32,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/merchant-fe-doc
+    working_directory: ~/merchant-fe-doc/website
     docker:
       - image: circleci/node:7.10
       # - image: mongo:3.4.4
