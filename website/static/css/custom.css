@@ -1,16 +1,158 @@
 /* your custom css */
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {}
+
+@media only screen and (min-width: 1024px) {}
+
+@media only screen and (max-width: 1023px) {}
+
+@media only screen and (min-width: 1400px) {}
+
+@media only screen and (min-width: 1500px) {}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    font-size: 14px;
 }
 
-@media only screen and (min-width: 1024px) {
+.onPageNav ul li a {
+    font-size: 12px;
 }
 
-@media only screen and (max-width: 1023px) {
+.mainContainer .wrapper ol li,
+.mainContainer .wrapper ul li {
+    margin: 0 0 2px 0;
 }
 
-@media only screen and (min-width: 1400px) {
+.mainContainer .wrapper ol,
+.mainContainer .wrapper ul {
+    padding: 2px 0 0 24px
 }
 
-@media only screen and (min-width: 1500px) {
+blockquote {
+    padding: 0 10px 0.8em 10px;
+    margin: 5px 0;
 }
+
+.container .wrapper h3 {
+    padding-top: 20px;
+    margin: 0;
+}
+
+a {
+    color: #3884FF;
+}
+
+pre code {
+    margin-top: 10px;
+}
+
+/* .mainContainer .wrapper blockquote p {
+    padding: 0;
+} */
+
+.button {
+    border: 1px solid #3884FF;
+    color: #3884FF;
+}
+
+.button:hover {
+    background: #3884FF;
+}
+
+nav.toc .toggleNav .navGroup {
+    margin-bottom: 5px;
+}
+
+nav.toc .toggleNav .navGroup h3 {
+    padding-top: 5px;
+    font-weight: 400;
+}
+/* 
+nav.toc .toggleNav ul li a.navItemActive {
+    color: #3884FF;
+}
+
+nav.toc .toggleNav ul li a:hover,
+nav.toc .toggleNav ul li a:focus {
+    color: #3884FF;
+} */

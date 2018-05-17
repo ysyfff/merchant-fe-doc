@@ -56,7 +56,7 @@ const siteConfig = {
   colors: {
     primaryColor: '#ff4081',
     // primaryColor: '#3884FF',
-    secondaryColor: '#FF0000',
+    secondaryColor: 'blue',
   },
 
   /* custom fonts for website */
@@ -95,6 +95,12 @@ const siteConfig = {
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
   //   repoUrl: 'https://github.com/facebook/test-site',
+
+  algolia: {
+    apiKey: 'my-api-key',
+    indexName: 'my-index-name',
+    algoliaOptions: {} // Optional, if provided by Algolia
+  },
 };
 
 module.exports = siteConfig;
