@@ -29,29 +29,52 @@
 #       - run: cd website && GIT_USER=ysyfff yarn run publish-gh-pages
 
 
+# version: 2
+# jobs:
+#   build:
+#     working_directory: ~/merchant-fe-doc/website
+#     docker:
+#       - image: circleci/node:7.10
+#       # - image: mongo:3.4.4
+#     steps:
+#       - checkout
+#       - restore_cache: # special step to restore the dependency cache 
+#           key: dependency-cache-{{ checksum "package.json" }}
+#       - run:
+#           git config --global user.email "ysyfff@users.noreply.github.com"
+#       - run:
+#           git config --global user.name "ysyfff"
+#       - run:
+#           echo "machine github.com login ysyfff password $GITHUB_TOKEN" > ~/.netrc
+#       - run: 
+#           cd website && yarn install
+#       - save_cache: # special step to save the dependency cache
+#           key: dependency-cache-{{ checksum "package.json" }}
+#           paths:
+#             - ./node_modules
+#       - run: 
+#           cd website && GIT_USER=ysyfff yarn run publish-gh-pages
+
+
 version: 2
 jobs:
-  build:
-    working_directory: ~/merchant-fe-doc/website
+  deploy-website:
     docker:
+      # specify the version you desire here
       - image: circleci/node:7.10
-      # - image: mongo:3.4.4
+
     steps:
       - checkout
-      - restore_cache: # special step to restore the dependency cache 
-          key: dependency-cache-{{ checksum "package.json" }}
       - run:
-          git config --global user.email "ysyfff@users.noreply.github.com"
-      - run:
-          git config --global user.name "ysyfff"
-      - run:
-          echo "machine github.com login ysyfff password $GITHUB_TOKEN" > ~/.netrc
-      - run: 
-          cd website && yarn install
-      - save_cache: # special step to save the dependency cache
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
-      - run: 
-          cd website && GIT_USER=ysyfff yarn run publish-gh-pages
+          name: Deploying to GitHub Pages
+          command: |
+            git config --global user.email "ysyfff@users.noreply.github.com"
+            git config --global user.name "ysyfff"
+            echo "machine github.com login ysyfff password $GITHUB_TOKEN" > ~/.netrc
+            cd website && yarn install && GIT_USER=ysyfff yarn run publish-gh-pages
 
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - deploy-website
