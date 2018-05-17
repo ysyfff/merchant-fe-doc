@@ -32,10 +32,10 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/mern-starter
+    working_directory: ~/merchant-fe-doc
     docker:
-      - image: circleci/node:4.8.2
-      - image: mongo:3.4.4
+      - image: circleci/node:7.10
+      # - image: mongo:3.4.4
     steps:
       - checkout
       - restore_cache: # special step to restore the dependency cache 
