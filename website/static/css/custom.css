@@ -151,7 +151,7 @@ nav.toc .toggleNav .navGroup h3 {
 pre code span {
   font-size: 12px;
 }
-/* 
+
 nav.toc .toggleNav ul li a.navItemActive {
     color: #3884FF;
 }
@@ -159,4 +159,4 @@ nav.toc .toggleNav ul li a.navItemActive {
 nav.toc .toggleNav ul li a:hover,
 nav.toc .toggleNav ul li a:focus {
     color: #3884FF;
-} */
+}
