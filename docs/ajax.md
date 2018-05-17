@@ -74,7 +74,7 @@ type|default
 ---|---
 object | Q.ajaxType.GET
 
-
+failed
 ### `tip`
 是否展示消息
 type|default
