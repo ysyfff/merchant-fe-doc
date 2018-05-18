@@ -163,4 +163,5 @@ nav.toc .toggleNav ul li a:focus {
 
 .navSearchWrapper .aa-dropdown-menu {
     border: 1px solid #ff4081;
+    box-shadow: #ff4081 0 1px 1px;
 }
