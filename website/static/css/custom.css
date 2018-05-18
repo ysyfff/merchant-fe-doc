@@ -149,7 +149,7 @@ nav.toc .toggleNav .navGroup h3 {
 }
 
 pre code span {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 nav.toc .toggleNav ul li a.navItemActive {
@@ -159,4 +159,8 @@ nav.toc .toggleNav ul li a.navItemActive {
 nav.toc .toggleNav ul li a:hover,
 nav.toc .toggleNav ul li a:focus {
     color: #3884FF;
+}
+
+.navSearchWrapper .aa-dropdown-me {
+    border: 1px solid #ff4081;
 }
