@@ -97,8 +97,8 @@ const siteConfig = {
   //   repoUrl: 'https://github.com/facebook/test-site',
 
   algolia: {
-    apiKey: 'my-api-key',
-    indexName: 'my-index-name',
+    apiKey: '9b85a0f24c9a35cf8632fdf39ec9b796',
+    indexName: 'merchant_fe',
     algoliaOptions: {} // Optional, if provided by Algolia
   },
 };
