@@ -1,7 +1,7 @@
 ---
 id: q-antd.fields
-title: 各表单元素
-sidebar_label: 各表单元素
+title: 表单元素
+sidebar_label: 表单元素
 ---
 
 ## 特殊说明
