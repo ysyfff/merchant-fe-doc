@@ -51,16 +51,6 @@ Q.ajax('FETCH_LIST', {seq: 'xxx'}).then((res)=>{
 
 ## Q.ajax.setup配置属性
 > 以下只展示了自定义封装属性以及部分ajax属性，其他属性参考[jquery的ajax配置](http://api.jquery.com/jquery.ajax/)
-<!-- 
-- [url](interface.md#url)
-- [ajaxType](interface.md#ajaxtype)
-- [tip](interface.md#tip)
-- [loading](interface.md#loading)
-- [mock](interface.md#mock)
-- [preprocess](interface.md#preprocess)
-- [lock](interface.md#lock)
-- [succMsg](interface.md#succmsg)
-- [failMsg](interface.md#failmsg) -->
 
 ### `url`
 请求路径

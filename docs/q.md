@@ -14,7 +14,7 @@ Q.param('seq');
 
 ## Q.ajax
 
-ajax请求后端接口，参见[接口调用](interface.md)
+ajax请求后端接口，参见[接口调用](ajax.md)
 
 ## Q.dateFormat
 
