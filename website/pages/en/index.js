@@ -76,7 +76,8 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        请阅读<a href="/merchant-fe-doc/docs/q-antd.html">[Docs]</a>相关内容
+        {/* http://my.qunar.com:3000/merchant-fe-doc/docs/notice.html */}
+        请阅读<a href="/merchant-fe-doc/docs/notice.html">[Docs]</a>相关内容
         {/* <Logo img_src={imgUrl('docusaurus.svg')} />
         <div className="inner">
           <ProjectTitle />
