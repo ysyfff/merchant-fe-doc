@@ -109,11 +109,20 @@ video {
 }
 
 blockquote {
-    padding: 0 10px 0.8em 10px;
+    padding: 0 10px 0 10px;
     margin: 5px 0;
+    border: 1px solid rgba(255, 64, 129, .7);
+    border-left-width: 5px;
 }
 
-.container .wrapper h3 {
+.mainContainer .wrapper blockquote p{
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    font-size: 12px;
+    /* font-style: italic; */
+}
+
+p .container .wrapper h3 {
     padding-top: 20px;
     margin: 0;
 }
@@ -197,3 +206,5 @@ nav.toc section .navGroups {
     position: sticky;
     top: 90px;
 }
+
+blockquote {}

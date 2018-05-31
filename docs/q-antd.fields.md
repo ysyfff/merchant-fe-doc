@@ -32,6 +32,38 @@ sidebar_label: 表单元素
 * TimePicker_
 * Transfer_
 
+## Props
+
+> Input_等输入框元素支持以下属性
+
+### onKeyUp-enter
+> onKeyUp-13和onKeyUp-enter是一样的效果，enter是13的别名，免除了记keyCode的麻烦
+
+> 除了onKeyUp时间，所有react(html)支持的事件都支持，比如onKeyDown,onKeyPress等等
+
+onKeyUp事件，`-enter`为__按键修饰器__[(参考vue按键修饰器)](https://cn.vuejs.org/v2/guide/events.html#%E6%8C%89%E9%94%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6)，当输入回车的时候执行onKeyUp的回调
+
+类型 | 默认值
+---|---
+function|-
+
+
+## 支持按键修饰器列表
+
+> 除了以下的别名，可以通过qAntd.config.keyCodes.enter=13进行扩展
+
+别名 | keyCode
+---|---
+enter|13
+right| 39
+left| 37
+up| 38
+down| 40
+del| 46
+tab| 9
+back| 8
+esc| 27
+
 ## 使用示例
 
 ```JS
