@@ -41,14 +41,14 @@ sidebar_label: 表单元素
 
 > 除了onKeyUp时间，所有react(html)支持的事件都支持，比如onKeyDown,onKeyPress等等
 
-onKeyUp事件，`-enter`为__按键修饰器__[(参考vue按键修饰器)](https://cn.vuejs.org/v2/guide/events.html#%E6%8C%89%E9%94%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6)，当输入回车的时候执行onKeyUp的回调
+onKeyUp事件，`-enter`为__按键修饰符__[(参考vue按键修饰符)](https://cn.vuejs.org/v2/guide/events.html#%E6%8C%89%E9%94%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6)，当输入回车的时候执行onKeyUp的回调
 
 类型 | 默认值
 ---|---
 function|-
 
 
-## 支持按键修饰器列表
+## 支持按键修饰符列表
 
 > 除了以下的别名，可以通过qAntd.config.keyCodes.enter=13进行扩展
 
