@@ -1,13 +1,27 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Form · merchant-fe</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Form · merchant-fe"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/merchant-fe-doc/index.html"/><meta property="og:description" content="&gt; 从2.3.3版本以后duplex支持a.b.c的用法了，但是要注意此时的model应该为mobx的map对象，具体示例如下"/><meta property="og:image" content="https://your-docusaurus-test-site.com/merchant-fe-doc/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/merchant-fe-doc/img/docusaurus.png"/><link rel="shortcut icon" href="/merchant-fe-doc/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/merchant-fe-doc/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/merchant-fe-doc/"><img class="logo" src="/merchant-fe-doc/img/docusaurus.svg" alt="merchant-fe"/><h2 class="headerTitleWithLogo">merchant-fe</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/merchant-fe-doc/docs/q-antd.html" target="_self">Docs</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>q-antd</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>开发须知</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/notice.html">概述</a></li></ul></div><div class="navGroup navGroupActive"><h3>新增页面</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/add-page.html">概述</a></li></ul></div><div class="navGroup navGroupActive"><h3>q-antd</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.html">概述</a></li><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.fields.html">表单元素</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/merchant-fe-doc/docs/q-antd.form.html">Form</a></li><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.view.html">View</a></li><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.a.html">A</a></li><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.text.html">Text</a></li><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.flexbox.html">Flexbox</a></li></ul></div><div class="navGroup navGroupActive"><h3>组件</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/pagination_.html">Pagination_</a></li></ul></div><div class="navGroup navGroupActive"><h3>接口调用</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/ajax.html">概述</a></li></ul></div><div class="navGroup navGroupActive"><h3>Q</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q.html">命名空间Q</a></li></ul></div></div></section></div><script>
-          var toggler = document.getElementById('navToggler');
-          var nav = document.getElementById('docsNav');
-          toggler.onclick = function() {
-            nav.classList.toggle('docsSliderActive');
-          };
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Form</h1></header><article><div><span><blockquote>
-<p>从2.3.3版本以后duplex支持a.b.c的用法了，但是要注意此时的model应该为mobx的map对象，具体示例如下</p>
-</blockquote>
-<h2><a class="anchor" aria-hidden="true" id="使用说明"></a><a href="#使用说明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用说明</h2>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Form · merchant-fe</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 使用说明"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Form · merchant-fe"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/merchant-fe-doc/index.html"/><meta property="og:description" content="## 使用说明"/><meta property="og:image" content="https://your-docusaurus-test-site.com/merchant-fe-doc/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/merchant-fe-doc/img/docusaurus.png"/><link rel="shortcut icon" href="/merchant-fe-doc/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/merchant-fe-doc/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/merchant-fe-doc/"><img class="logo" src="/merchant-fe-doc/img/docusaurus.svg" alt="merchant-fe"/><h2 class="headerTitleWithLogo">merchant-fe</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/merchant-fe-doc/docs/q-antd.html" target="_self">Docs</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>q-antd</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">开发须知</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/notice.html">概述</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">新增页面</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/add-page.html">概述</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">q-antd</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.html">概述</a></li><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.fields.html">表单元素</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.form.html">Form</a></li><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.view.html">View</a></li><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.a.html">A</a></li><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.text.html">Text</a></li><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q-antd.flexbox.html">Flexbox</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">组件</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/pagination_.html">Pagination_</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">接口调用</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/ajax.html">概述</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Q</h3><ul><li class="navListItem"><a class="navItem" href="/merchant-fe-doc/docs/q.html">命名空间Q</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Form</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="使用说明"></a><a href="#使用说明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用说明</h2>
 <p>使用Form组件和FormItem组件进行布局</p>
 <ul>
 <li>使用Form的model属性和表单元素的duplex属性，进行数据的双绑。</li>
@@ -18,17 +32,11 @@
 </ul></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="使用示例"></a><a href="#使用示例" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用示例</h2>
-<h3><a class="anchor" aria-hidden="true" id="普通情况下"></a><a href="#普通情况下" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>普通情况下</h3>
-<blockquote>
-<p>此情况下notice=observable({})，此时的search是mobx的对象</p>
-</blockquote>
-<pre><code class="hljs css JS"><span class="hljs-keyword">import</span> mobx, { observable, action, transaction, spy } <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx'</span>;
-
-<span class="hljs-comment">// 注意notice的定义</span>
-<span class="hljs-keyword">const</span> notice = observable({
-  <span class="hljs-attr">alert</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-attr">phone</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-attr">phones</span>: [<span class="hljs-string">''</span>]
+<pre><code class="hljs css languages- JS"><span class="hljs-keyword">import</span> mobx, { observable, action, transaction, spy } <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx'</span>;
+<span class="hljs-keyword">const</span> search = observable({
+  <span class="hljs-attr">start</span>: moment().add(<span class="hljs-number">-6</span>, <span class="hljs-string">'days'</span>).format(<span class="hljs-string">'YYYY-MM-DD'</span>),
+  <span class="hljs-attr">end</span>: moment().format(<span class="hljs-string">'YYYY-MM-DD'</span>),
+  <span class="hljs-attr">room</span>: <span class="hljs-string">'all'</span>
 });
 <span class="hljs-keyword">const</span> noticeRule = observable({
   <span class="hljs-attr">singlePhone</span>: [
@@ -47,62 +55,14 @@
             <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{0}</span>&gt;</span>关闭<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">Select_</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">FormItem</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">FormItem</span> <span class="hljs-attr">labelStyle</span>=<span class="hljs-string">{labelStyle}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"mb-13"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"声音提醒"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Select_</span> <span class="hljs-attr">duplex</span>=<span class="hljs-string">"voice"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">width:</span> <span class="hljs-attr">130</span> }}&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{1}</span>&gt;</span>开启<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{0}</span>&gt;</span>关闭<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Select_</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">FormItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">FormItem</span> <span class="hljs-attr">labelStyle</span>=<span class="hljs-string">{labelStyle}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"mb-13"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"电话提醒"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">Select_</span> <span class="hljs-attr">duplex</span>=<span class="hljs-string">"phone"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">width:</span> <span class="hljs-attr">130</span> }}&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{1}</span>&gt;</span>开启<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{0}</span>&gt;</span>关闭<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">Select_</span>&gt;</span>
-          {notice.phone === 1 &amp;&amp;
-            <span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">clear</span> <span class="hljs-attr">mt</span>=<span class="hljs-string">{20}</span>&gt;</span>
-              {phones.map((item, i) =&gt; {
-                return (
-                  <span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">clear</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{i}</span> <span class="hljs-attr">mb</span>=<span class="hljs-string">{i</span> === <span class="hljs-string">phones.length</span> <span class="hljs-attr">-</span> <span class="hljs-attr">1</span> ? <span class="hljs-attr">0</span> <span class="hljs-attr">:</span> <span class="hljs-attr">14</span>}&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">FormItem</span> <span class="hljs-attr">prop</span>=<span class="hljs-string">"singlePhone"</span> <span class="hljs-attr">duplex</span>=<span class="hljs-string">{[</span>'<span class="hljs-attr">phones</span>', <span class="hljs-attr">i</span>]} <span class="hljs-attr">labelWidth</span>=<span class="hljs-string">{0}</span>&gt;</span>
-                      <span class="hljs-tag">&lt;<span class="hljs-name">Input_</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{i}</span> <span class="hljs-attr">type_</span>=<span class="hljs-string">"vice"</span> <span class="hljs-attr">duplex</span>=<span class="hljs-string">{[</span>'<span class="hljs-attr">phones</span>', <span class="hljs-attr">i</span>]} <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">width:</span> <span class="hljs-attr">130</span> }} <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"请输入手机号"</span> /&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">FormItem</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span>
-                )
-              })}
-            <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span>
-          }
-        <span class="hljs-tag">&lt;/<span class="hljs-name">FormItem</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">Form</span>&gt;</span>
-    )
-  }
-}
-</span></code></pre>
-<h3><a class="anchor" aria-hidden="true" id="特殊情况下"></a><a href="#特殊情况下" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>特殊情况下</h3>
-<blockquote>
-<p>此时的notice=observable.map({})，此时的search是mobx的map对象，在且仅在这种情况下才可以使用a.b.c</p>
-</blockquote>
-<pre><code class="hljs css JS"><span class="hljs-keyword">import</span> mobx, { observable, action, transaction, spy } <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx'</span>;
-
-<span class="hljs-comment">// 注意notice的定义</span>
-<span class="hljs-keyword">const</span> notice=observable.map({
-})
-<span class="hljs-keyword">const</span> noticeRule = observable({
-  <span class="hljs-attr">singlePhone</span>: [
-    { <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">message</span>: <span class="hljs-string">'必填'</span>, <span class="hljs-attr">trigger</span>: <span class="hljs-string">'blur'</span>},
-    { ...rules.cellphone, <span class="hljs-attr">trigger</span>: [<span class="hljs-string">'blur'</span>, <span class="hljs-string">'change'</span>]}
-  ]
-})
-@observer
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Remind</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-  render() {
-    <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Form</span> <span class="hljs-attr">model</span>=<span class="hljs-string">{notice}</span> <span class="hljs-attr">rules</span>=<span class="hljs-string">{noticeRule}</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">{ref</span> =&gt;</span> this.remindForm = ref} labelWidth={80} labelPosition=":flex-start"&gt;
-        <span class="hljs-tag">&lt;<span class="hljs-name">FormItem</span> <span class="hljs-attr">labelStyle</span>=<span class="hljs-string">{labelStyle}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"mb-13"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"弹窗提醒"</span>&gt;</span>
-        
-          {/* 注意duplex的取值 */}
-          <span class="hljs-tag">&lt;<span class="hljs-name">Select_</span> <span class="hljs-attr">duplex</span>=<span class="hljs-string">"a.b.c"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">width:</span> <span class="hljs-attr">130</span> }}&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{1}</span>&gt;</span>开启<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{0}</span>&gt;</span>关闭<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">Select_</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">FormItem</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">FormItem</span> <span class="hljs-attr">labelStyle</span>=<span class="hljs-string">{labelStyle}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"mb-13"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"电话提醒"</span>&gt;</span>
-
-          {/* 注意duplex的取值 */}
-          <span class="hljs-tag">&lt;<span class="hljs-name">Select_</span> <span class="hljs-attr">duplex</span>=<span class="hljs-string">"b.c"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">width:</span> <span class="hljs-attr">130</span> }}&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{1}</span>&gt;</span>开启<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">Option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{0}</span>&gt;</span>关闭<span class="hljs-tag">&lt;/<span class="hljs-name">Option</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">Select_</span>&gt;</span>
@@ -143,7 +103,7 @@
 <tbody>
 <tr><td>resetFields</td><td>重置表单默认值</td><td>this.xxxFrom.resetFields()</td></tr>
 <tr><td>resetFieldsStyle</td><td>重置校验过之后的样式</td><td>this.xxxFrom.resetFieldsStyle()</td></tr>
-<tr><td>validate</td><td>校验表单，返回一个Promise实例，也支持传入回调函数处理</td><td>this.xxxForm.validate().then((valid)=&gt;{}) 或者 this.xxxForm.validate((valid)=&gt;{})</td></tr>
+<tr><td>validate</td><td>校验一项表单，,<strong>若 propName 参数为空，则校验全部组件</strong>，返回一个Promise实例，也支持传入回调函数处理</td><td>this.xxxForm.validate(propName).then((valid)=&gt;{}) 或者 this.xxxForm.validate(propName, (valid)=&gt;{})</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="form属性"></a><a href="#form属性" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Form属性</h3>
@@ -184,7 +144,7 @@
 <tbody>
 </tbody>
 </table>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="q-antd.fields.html">← 表单元素</a><a class="docs-next button" href="q-antd.view.html">View →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#使用说明">使用说明</a></li><li><a href="#使用示例">使用示例</a><ul class="toc-headings"><li><a href="#普通情况下">普通情况下</a></li><li><a href="#特殊情况下">特殊情况下</a></li></ul></li><li><a href="#校验规则的使用说明">校验规则的使用说明</a></li><li><a href="#api">API</a><ul class="toc-headings"><li><a href="#form方法">Form方法</a></li><li><a href="#form属性">Form属性</a></li><li><a href="#formitem属性">FormItem属性</a></li><li><a href="#action属性">Action属性</a></li></ul></li></ul></nav></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/merchant-fe-doc/docs/q-antd.fields.html">← 表单元素</a><a class="docs-next button" href="/merchant-fe-doc/docs/q-antd.view.html">View →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#使用说明">使用说明</a></li><li><a href="#使用示例">使用示例</a></li><li><a href="#校验规则的使用说明">校验规则的使用说明</a></li><li><a href="#api">API</a><ul class="toc-headings"><li><a href="#form方法">Form方法</a></li><li><a href="#form属性">Form属性</a></li><li><a href="#formitem属性">FormItem属性</a></li><li><a href="#action属性">Action属性</a></li></ul></li></ul></nav></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
               var search = docsearch({
                 
                 apiKey: '9b85a0f24c9a35cf8632fdf39ec9b796',
